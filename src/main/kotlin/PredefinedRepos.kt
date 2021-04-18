@@ -1,8 +1,6 @@
 import org.gradle.api.artifacts.dsl.RepositoryHandler
-import java.net.URI
+import org.gradle.kotlin.dsl.maven
 
 fun RepositoryHandler.tencentCloud() {
-    maven {
-        it.url = URI.create("https://mirrors.tencent.com/nexus/repository/maven-public/")
-    }
+    maven("https://mirrors.tencent.com/nexus/repository/maven-public/")
 }
